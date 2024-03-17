@@ -31,9 +31,14 @@ document.body.innerHTML += `<p>${CompanyJustFood(50)}</p>`
 document.body.innerHTML += `<p>${CompanyYourMama(100)}</p>`
 document.body.innerHTML += `<p>${CompanyFlavourHaver(150)}</p>`
 
+const text =  document.querySelector("#text")
+const button =  document.querySelector("#btn")
+
 function createEvent (eventName, sumPeople, companyFunction) {
   let company = companyFunction(sumPeople);
   return `Událost ${eventName} s ${company}`;
 }
 
+btn.addEventListener("click", () => {
 document.body.innerHTML += (createEvent("Inaugurace prezidenta", 100, CompanyFlavourHaver));
+})
